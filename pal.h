@@ -7,3 +7,4 @@
 #include <imgui/imgui.h>
 #include <gain.h>
 #include "utils.h"
+#include "wavfile.h"

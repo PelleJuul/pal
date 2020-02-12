@@ -12,7 +12,7 @@ codeLocation = '{{codeLocation}}'
 objectsDir = 'objects'
 
 # The source files for all of pal, excluding ImGui sources.
-palCppFiles = ['gain.cpp', 'gui.cpp', 'realtime.cpp', 'scope.cpp', 'sinosc.cpp', 'utils.cpp']
+palCppFiles = ['gain.cpp', 'delay.cpp', 'gui.cpp', 'realtime.cpp', 'scope.cpp', 'sinosc.cpp', 'utils.cpp', 'wavfile.cpp']
 
 def shell(command):
     exitCode = os.system(command)
@@ -39,6 +39,8 @@ def main():
         print('Running', sys.argv[2:])
     elif command == 'new':
         new(sys.argv[2:])
+    elif command == 'test':
+        test(sys.argv[2:])
     elif command == 'help':
         printHelp();
     else:
@@ -72,7 +74,7 @@ def install(args):
     else:
         pass
 
-def installBuildObjects(debug = False):
+def installBuildObjects(debug = False, test = False):
     print('Building object files')
 
     if not os.path.isdir('objects'):
@@ -85,6 +87,9 @@ def installBuildObjects(debug = False):
 
     if (debug):
         flags.append('-g');
+    
+    if (debug):
+        flags.append('-D PAL_TEST');
 
     flagString = ' '.join(flags);
 
@@ -109,7 +114,7 @@ def build(args):
                     shell(cmd)
                     return
 
-    libs = ['-lSDL2', '-lportaudio', '-framework OpenGl']
+    libs = ['-lSDL2', '-lportaudio', '-lsndfile', '-framework OpenGl']
     includes = ['-I', os.path.join(codeLocation, 'imgui'), f'-I {codeLocation}', '-I /usr/local/include/SDL2']
     flags = ['-std=c++11']
     objects = os.path.join(codeLocation, 'objects', '*.o')
@@ -128,6 +133,10 @@ def build(args):
 
     print(buildCommand)
     shell(f'c++ {flagString}')
+
+def test(args):
+    shell('c++ test.cpp delay.cpp -D PAL_TEST -g --std=c++11 -o test')
+    shell('./test')
 
 def new(args):
     filename = "main.cpp"
