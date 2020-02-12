@@ -61,6 +61,8 @@ void Gui::show()
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != NULL);
 
+    int previousTime = SDL_GetTicks();
+
     // Main loop
     bool done = false;
     while (!done)
@@ -76,6 +78,16 @@ void Gui::show()
             ImGui_ImplSDL2_ProcessEvent(&event);
             if (event.type == SDL_QUIT)
                 done = true;
+        }
+
+        float time = SDL_GetTicks();
+        float delta = time - previousTime;
+        float delay = 1000.0 / 24.0 - delta;
+        previousTime = time;
+
+        if (delay > 0)
+        {
+            SDL_Delay(1000.0 / 24.0 - delta);
         }
 
         // Start the Dear ImGui frame
