@@ -1,5 +1,5 @@
 #include "gain.h"
-#include <imgui.h>
+#include "imgui/imgui.h"
 
 Gain::Gain(std::string name)
 {

@@ -1,7 +1,9 @@
 #include "delay.h"
-#include "test.h"
 #include <vector>
 #include <cmath>
+#ifdef PAL_TEST
+#include "test.h"
+#endif
 
 namespace pal
 {

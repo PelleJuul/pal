@@ -1,5 +1,5 @@
 #include "scope.h"
-#include <imgui.h>
+#include "imgui/imgui.h"
 
 Scope::Scope(int l) :
     data(l, 0)
