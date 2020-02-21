@@ -23,6 +23,9 @@ class Adsr
 
     Adsr(float a, float d, float s, float r, float fs = 44100);
 
+    void draw();
+    /// Draw a control UI for the envelope;
+
     float next();
     /// Get the next sample of the envelope.
 
