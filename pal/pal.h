@@ -1,5 +1,6 @@
 #pragma once
 
+#include "adsr.h"
 #include "gui.h"
 #include "realtime.h"
 #include "sinosc.h"
