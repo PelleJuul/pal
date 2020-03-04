@@ -20,7 +20,7 @@ void Adsr::draw()
         ImGui::SliderFloat("Release", &rel, 0, 10);
     }
 
-    if (isTriggered)
+    if (state != AdsrState::AdsrRelease)
     {
         if (ImGui::Button("Untrigger"))
         {
@@ -39,26 +39,51 @@ void Adsr::draw()
 
 float Adsr::next()
 {
-    if (isTriggered)
+    if (state == AdsrState::AdsrAttack)
     {
-        if (timeSinceTrigger < attack)
+        if (value >= 1.0)
+        {
+            state = AdsrState::AdsrDecay;
+        }
+        else
         {
             value += (1.0 / fs) * (1.0 / attack);
         }
-        else if (timeSinceTrigger < attack + decay)
+    }
+
+    if (state == AdsrState::AdsrDecay)
+    {
+        if (value <= sustain)
+        {
+            state = AdsrState::AdsrSustain;
+        }
+        else
         {
             value -= (1.0 / fs) * (1.0 / decay) * (1.0 - sustain);
         }
-
-        timeSinceTrigger += (1.0 / fs);
     }
-    else if (value > 0)
+
+    if (state == AdsrState::AdsrSustain && fabs(value - sustain) > 0.001)
     {
-        value -= sustain * (1.0 / fs) * (1.0 / rel);
-
-        timeSinceRelease += (1.0 / fs);
+        if (value >= sustain)
+        {
+            value -= (1.0 / fs) * (1.0 / decay) * (1.0 - sustain);
+        }
+        else
+        {
+            value += (1.0 / fs) * (1.0 / attack);
+        }
     }
-    else if (value < 0)
+
+    if (state == AdsrState::AdsrRelease)
+    {
+        if (value > 0)
+        {
+            value -= sustain * (1.0 / fs) * (1.0 / rel);
+        }
+    }
+
+    if (value < 0)
     {
         value = 0;
     }
@@ -68,18 +93,10 @@ float Adsr::next()
 
 void Adsr::release()
 {
-    if (isTriggered)
-    {
-        isTriggered = false;
-        timeSinceRelease = 0;
-    }
+    state = AdsrState::AdsrRelease;
 }
 
 void Adsr::trigger()
 {
-    if (!isTriggered)
-    {
-        isTriggered = true;
-        timeSinceTrigger = 0;
-    }
+    state = AdsrState::AdsrAttack;
 }

@@ -2,6 +2,14 @@
 
 /// The ADSR class allow you attack-decay-sustain-release envelopes.
 
+enum AdsrState
+{
+    AdsrAttack,
+    AdsrDecay,
+    AdsrSustain,
+    AdsrRelease
+};
+
 class Adsr
 {
     public:
@@ -13,13 +21,10 @@ class Adsr
     float rel = 1.0;
     /// Are the variable controlling the shape of the envelope.
 
+    AdsrState state = AdsrState::AdsrRelease;
+
     float value = 0;
     /// Is the current value of the envelope.
-
-    float timeSinceTrigger = 0;
-    float timeSinceRelease = 0;
-    bool isTriggered = false;
-    /// Are the state variable which control the envelope.
 
     Adsr(float a, float d, float s, float r, float fs = 44100);
 
