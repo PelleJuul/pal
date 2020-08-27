@@ -1,0 +1,7 @@
+**/*.d
+**/*.o
+*.o
+**/.DS_Store
+.vscode
+imgui.ini
+old
