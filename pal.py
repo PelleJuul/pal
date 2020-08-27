@@ -10,6 +10,7 @@ def printUsage():
     print("Quickly create new pal projects.\n")
     print("Available commands:")
     print("  new        Create a new pal project in the current directory.")
+    print("  update     Updates to the latest pal library sources (on this machine).")
     print()
     print("Optional arguments:")
     print("  -h         Print this help message.")
@@ -23,6 +24,18 @@ if "new" in sys.argv:
     for file in installFiles:
         print(f'Copying {palPath}/{file} to {file}')
         os.system(f'cp -r {palPath}/{file} {file}')
+
+if "update" in sys.argv:
+    installFiles = ["makefile", "pal"]
+
+    answer = input("Updating pal will overwrite the pal/ sources and makefile. Proceed? [y/n]: ")
+
+    if (answer.lower() == "y"):
+        for file in installFiles:
+            print(f'Copying {palPath}/{file} to {file}')
+            os.system(f'cp -r {palPath}/{file} {file}')
+    else:
+        print("Update cancelled.")
 
 else:
     printUsage()
