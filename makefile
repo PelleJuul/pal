@@ -8,6 +8,9 @@ LIBS=-lsdl2 -lportaudio -lsndfile -framework OpenGl
 # Uncomment this if you want to optimize your app.
 CPPFLAGS+=-O3
 
+# Use this command to choose your install location.
+INSTALL_LOCATION=/usr/local/bin
+
 # Edit these variables to suit your application.
 BIN=main
 SOURCES=$(wildcard *.cpp)
@@ -28,10 +31,14 @@ $(BIN): $(OBJECTS) $(PAL_OBJECTS)
 %.o : %.cpp
 	$(CPP) $(CPPFLAGS) -c -MMD -MP $< -o $@
 
-.phony: clean run
+.phony: clean run install
 
 run: all
 	./$(BIN)
+
+install:
+	sed 's|{{palPath}}|$(PWD)|g' pal.py > $(INSTALL_LOCATION)/pal
+	chmod +x $(INSTALL_LOCATION)/pal
 
 clean:
 	rm -f $(PAL_OBJECTS)
