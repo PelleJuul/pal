@@ -27,7 +27,7 @@ void writeWavFile(std::string path, std::vector<float> samples, float sampleRate
     sf_close(file);
 }
 
-void readWavFile(std::string path, std::vector<float> &samples, int channel, float *sampleRateOut)
+bool readWavFile(std::string path, std::vector<float> &samples, int channel, float *sampleRateOut)
 {
         SF_INFO info;
         SNDFILE *file = sf_open(path.c_str(), SFM_READ, &info);
@@ -36,7 +36,7 @@ void readWavFile(std::string path, std::vector<float> &samples, int channel, flo
         {
             sf_close(file);
             printf("Error: could not load file %s: %s\n", path.c_str(), sf_strerror(file));
-            return;
+            return false;
         }
 
         int numSamples = info.frames * info.channels;
@@ -46,6 +46,7 @@ void readWavFile(std::string path, std::vector<float> &samples, int channel, flo
         if (sf_read_float(file, temp.data(), numSamples) != numSamples)
         {
             printf("Error: did not read the correct number of samples from %s\n", path.c_str());
+            return false;
         }
 
         samples.clear();
@@ -58,4 +59,5 @@ void readWavFile(std::string path, std::vector<float> &samples, int channel, flo
         }
 
         sf_close(file);
+        return true;
 }

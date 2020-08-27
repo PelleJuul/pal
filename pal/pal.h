@@ -9,3 +9,4 @@
 #include "gain.h"
 #include "utils.h"
 #include "wavfile.h"
+#include "AudioPlayer.h"
