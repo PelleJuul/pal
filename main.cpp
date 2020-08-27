@@ -29,10 +29,10 @@ int main(int argc, char **argv)
             "imgui_demo.cpp.\n\nHave a great time using pal! If you find a bug "
             "or have questions please post an issue on github.com/PelleJuul/pal"
         );
-
         ImGui::End();
 
-        ImGui::ShowDemoWindow();
+        // Uncomment this to see all the different UI widgets available.
+        // ImGui::ShowDemoWindow();
     });
 
     rt.stop();
