@@ -25,7 +25,7 @@ if "new" in sys.argv:
         print(f'Copying {palPath}/{file} to {file}')
         os.system(f'cp -r {palPath}/{file} {file}')
 
-if "update" in sys.argv:
+elif "update" in sys.argv:
     installFiles = ["makefile", "pal"]
 
     answer = input("Updating pal will overwrite the pal/ sources and makefile. Proceed? [y/n]: ")
