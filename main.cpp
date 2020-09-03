@@ -2,40 +2,33 @@
 
 int main(int argc, char **argv)
 {
-    Realtime rt = quickAudio([&](int n, int nc, float *in, float *out)
+    RealTimeAudio audio;
+
+    audio.callback = [&](int numSamples, int numChannels, float *in, float *out)
     {
-        for (int i = 0; i < n; i++)
+        for (int sample = 0; sample < numSamples; sample++)
         {
             // Compute your sample here.
             float y = 0;
 
-            for (int c = 0; c < nc; c++)
+            for (int channel = 0; channel < numChannels; channel++)
             {
                 // Write it to the output array here.
-                out[i * nc + c] = y;
+                out[sample * numChannels + channel] = y;
             }
         }
-    });
+    };
 
     quickGui([&]()
     {
-        ImGui::Begin("New PAL project");
-        ImGui::TextWrapped(
-            "Congratulations, you have successfully compiled a new pal project."
-            "To start developing your application edit the 'main.cpp' file "
-            "which already contains the code necessary for this UI and for "
-            "real time audio. To see all UI widgets available through ImGui "
-            "look at the source code for ImGui::ShowDemoWindow in pal/imgui/"
-            "imgui_demo.cpp.\n\nHave a great time using pal! If you find a bug "
-            "or have questions please post an issue on github.com/PelleJuul/pal"
-        );
+        ImGui::SetNextWindowSize(ImVec2(350, 0), ImGuiCond_FirstUseEver);
+        ImGui::Begin("Audio Setup");
+            audio.draw();
         ImGui::End();
 
-        // Uncomment this to see all the different UI widgets available.
+        // Uncomment this to see all the available UI widgets.
         // ImGui::ShowDemoWindow();
     });
-
-    rt.stop();
 
     return 0;
 }
