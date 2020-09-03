@@ -1,7 +1,7 @@
 #pragma once
 
 #include "adsr.h"
-#include "gui.h"
+#include "Gui.h"
 #include "sinosc.h"
 #include "scope.h"
 #include "imgui/imgui.h"

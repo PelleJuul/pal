@@ -19,7 +19,9 @@ int main(int argc, char **argv)
         }
     };
 
-    quickGui([&]()
+    Gui gui(800, 600, "New pal project");
+
+    while (gui.draw())
     {
         ImGui::SetNextWindowSize(ImVec2(350, 0), ImGuiCond_FirstUseEver);
         ImGui::Begin("Audio Setup");
@@ -28,7 +30,7 @@ int main(int argc, char **argv)
 
         // Uncomment this to see all the available UI widgets.
         // ImGui::ShowDemoWindow();
-    });
+    }
 
     return 0;
 }

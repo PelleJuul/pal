@@ -3,10 +3,10 @@ CPPFLAGS=-std=c++11
 LIBS=-lsdl2 -lportaudio -lsndfile -framework OpenGl
 
 # Uncomment this if you want to debug your app.
-# CPPFLAGS+=-g
+CPPFLAGS+=-g
 
 # Uncomment this if you want to optimize your app.
-CPPFLAGS+=-O3
+# CPPFLAGS+=-O3
 
 # Use this command to choose your install location.
 INSTALL_LOCATION=/usr/local/bin

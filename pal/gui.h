@@ -7,27 +7,22 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
 #include <functional>
+#include <string>
 
 // This is a test
 
 class Gui
 {
     public:
-    virtual void layout() = 0;
-    void show();
+    Gui(int width, int height, std::string title);
+    ~Gui();
+    bool draw();
 
     protected:
+    SDL_GLContext gl_context;
+    SDL_Window *window;
+    int previousTime = 0;
+    bool isDone = false;
+    bool isFirstFrame = true;
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 };
-
-class QuickGui : public Gui
-{
-    public:
-    QuickGui(std::function<void()> layoutFunction);
-    void layout();
-
-    private:
-    std::function<void()> layoutFunction;
-};
-
-void quickGui(std::function<void()> layout);

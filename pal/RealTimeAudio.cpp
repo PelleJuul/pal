@@ -1,5 +1,5 @@
 #include "RealTimeAudio.h"
-#include "gui.h"
+#include "Gui.h"
 #include <portaudio.h>
 
 #if __APPLE__
