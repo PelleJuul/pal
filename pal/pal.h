@@ -1,6 +1,7 @@
 #pragma once
 
 #include "adsr.h"
+#include "Filter.h"
 #include "Gui.h"
 #include "sinosc.h"
 #include "scope.h"

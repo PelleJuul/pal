@@ -1,5 +1,7 @@
 #include "pal/pal.h"
 
+using namespace pal;
+
 int main(int argc, char **argv)
 {
     RealTimeAudio audio;
