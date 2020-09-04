@@ -1,5 +1,5 @@
 CPP=clang++
-CPPFLAGS=-std=c++11
+CPPFLAGS=-std=c++11 -D PAL
 LIBS=-lsdl2 -lportaudio -lsndfile -framework OpenGl
 
 # Uncomment this if you want to debug your app.
