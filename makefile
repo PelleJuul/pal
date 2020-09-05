@@ -46,6 +46,8 @@ clean:
 	rm -f $(OBJECTS)
 	rm -f $(DEPS)
 	rm -f $(BIN)
+	rm -f *.o *.d
+	rm -f imgui.ini
 
 -include $(PAL_DEPS)
 -include $(DEPS)
