@@ -24,14 +24,14 @@ void AudioPlayer::draw()
     {
         if (ImGui::Button("Pause"))
         {
-            
+            pause();
         }
     }
     else
     {
         if (ImGui::Button("Play"))
         {
-            
+            play();
         }
     }
 
@@ -39,7 +39,7 @@ void AudioPlayer::draw()
 
     if (ImGui::Button("Stop"))
     {
-        
+        stop();
     }
 
     ImGui::SameLine();
