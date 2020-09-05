@@ -21,6 +21,7 @@ class Oscillator
 
     float getNext();
 
+    void setSampleRate(float value) { value = value; }
     void setType(Oscillator::Type value) { type = value; };
 
     private:
