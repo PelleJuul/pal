@@ -1,0 +1,5 @@
+# The *examplefiles* file is used to list which files should be copied to output
+# directory when the `pal example <example name>` command is used. There should
+# be one file per line. Comments, like this one, and blank lines are allowed.
+
+FilterExample.cpp
