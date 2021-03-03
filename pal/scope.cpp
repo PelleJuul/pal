@@ -14,23 +14,8 @@ void Scope::write(float x)
         return;
     }
 
-    if (triggerEnabled && x > trigger && prev < trigger)
-    {
-        for (int i = 0; i < data.size(); i++)
-        {
-            data[i] = 0;
-        }
-    }
-    else
-    {
-        for (int i = 1; i < data.size(); i++)
-        {
-            data[i-1] = data[i];
-        }
-    }
-    
-    data[data.size() - 1] = x;
-    prev = x;
+    data[writeIndex] = x;
+    writeIndex = (writeIndex + 1) % data.size();
 }
 
 void Scope::draw()

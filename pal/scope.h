@@ -15,6 +15,7 @@ class Scope
 
     private:
     std::vector<float> data;
+    int writeIndex = 0;
     float trigger = 0.0;
     float prev = 0;
     bool triggerEnabled = false;
