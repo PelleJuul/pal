@@ -1,3 +1,5 @@
+#if 1
+
 #include "Gui.h"
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_sdl.h"
@@ -9,6 +11,9 @@
 
 Gui::Gui(int width, int height, std::string title)
 {
+#ifdef WIN64
+
+#else
     // Setup SDL
     // (Some versions of SDL before <2.0.10 appears to have performance/stalling issues on a minority of Windows systems, 
     // depending on whether SDL_INIT_GAMECONTROLLER is enabled or disabled.. updating to latest version of SDL is recommended!)
@@ -60,6 +65,7 @@ Gui::Gui(int width, int height, std::string title)
     //IM_ASSERT(font != NULL);
 
     previousTime = SDL_GetTicks();
+#endif
 }
 
 Gui::~Gui()
@@ -125,3 +131,4 @@ bool Gui::draw()
 
     return !isDone;
 }
+#endif

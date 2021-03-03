@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\pal">
+      <UniqueIdentifier>{1639ad3f-4cbc-409b-aa9c-fcde57eca09d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pal\imgui">
+      <UniqueIdentifier>{22638a68-2c3b-4a7c-bd03-0712d7156095}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\adsr.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\AudioPlayer.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\delay.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Filter.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\gain.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Gui.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Oscillator.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\RealTimeAudio.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\scope.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\sinosc.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\utils.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\wavfile.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_demo.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_draw.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_impl_opengl2.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_impl_sdl.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_widgets.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Gui_windows.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_tables.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="windows\include\sdl2\SDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_bits.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_blendmode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_clipboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_android.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_iphoneos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_macosx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_minimal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_pandora.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_psp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_windows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_winrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_config_wiz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_copying.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_cpuinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_egl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_filesystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_gamecontroller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_gesture.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_haptic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_hints.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_keycode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_loadso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_messagebox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_metal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_mutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengles2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengles2_gl2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengles2_gl2ext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengles2_gl2platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengles2_khrplatform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_opengl_glext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_pixels.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_power.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_quit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_rect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_render.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_revision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_rwops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_scancode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_sensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_shape.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_stdinc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_surface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_system.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_syswm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_assert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_compare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_crc32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_fuzzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_harness.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_images.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_log.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_md5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_memory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_test_random.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_touch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\SDL_vulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\adsr.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\AudioPlayer.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\begin_code.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sdl2\close_code.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\delay.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\Filter.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\gain.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\Gui.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\Oscillator.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\pal.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\portaudio.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\RealTimeAudio.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\scope.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\sinosc.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\include\sndfile.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\utils.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\wavfile.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imconfig.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui_impl_opengl2.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui_impl_sdl.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui_internal.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imstb_rectpack.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imstb_textedit.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imstb_truetype.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
