@@ -6,6 +6,7 @@
 class RealTimeAudio
 {
     public:
+    float sampleRate = 48000;
 
     RealTimeAudio();
     virtual ~RealTimeAudio();

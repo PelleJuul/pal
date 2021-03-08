@@ -125,13 +125,13 @@ void RealTimeAudio::start()
     inputParameters.device = selectedInputDevice;
     inputParameters.channelCount = 2;
     inputParameters.sampleFormat = paFloat32;
-    inputParameters.suggestedLatency = 0.005;
+    inputParameters.suggestedLatency = 0.1;
     inputParameters.hostApiSpecificStreamInfo = NULL;
 
     outputParameters.device = selectedOutputDevice;
     outputParameters.channelCount = 2;
     outputParameters.sampleFormat = paFloat32;   
-    outputParameters.suggestedLatency = 0.005; 
+    outputParameters.suggestedLatency = 0.1; 
     outputParameters.hostApiSpecificStreamInfo = NULL;
 
 #if __APPLE__
@@ -141,15 +141,19 @@ void RealTimeAudio::start()
     outputParameters.hostApiSpecificStreamInfo = &macCoreStreamInfo;
 #endif
 
+    const PaDeviceInfo *info = Pa_GetDeviceInfo(selectedOutputDevice);
+
     auto err = Pa_OpenStream(
         &this->stream,
         &inputParameters,
         &outputParameters,
-        44100,
+        info->defaultSampleRate,
         512,
         paClipOff,
         paCallback,
         this);
+    
+    this->sampleRate = info->defaultSampleRate;
 
     if (err != paNoError)
     {
