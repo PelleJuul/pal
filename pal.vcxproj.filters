@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\pal">
+      <UniqueIdentifier>{a8e0e57f-010d-4322-9622-b530e13214ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pal\imgui">
+      <UniqueIdentifier>{b0d456a5-6369-4838-9fea-33c244908316}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pal\adsr.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\AudioPlayer.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\delay.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Filter.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\gain.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Gui.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Gui_windows.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\Oscillator.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\RealTimeAudio.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\scope.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\sinosc.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\utils.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\wavfile.cpp">
+      <Filter>Source Files\pal</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_demo.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_draw.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_impl_opengl2.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_impl_sdl.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="pal\imgui\imgui_widgets.cpp">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pal\adsr.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\AudioPlayer.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\delay.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\Filter.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\gain.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\Gui.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\Oscillator.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\pal.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\RealTimeAudio.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\scope.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\sinosc.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\utils.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\wavfile.h">
+      <Filter>Source Files\pal</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imconfig.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui_impl_opengl2.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui_impl_sdl.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imgui_internal.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imstb_rectpack.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imstb_textedit.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="pal\imgui\imstb_truetype.h">
+      <Filter>Source Files\pal\imgui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

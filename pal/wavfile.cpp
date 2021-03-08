@@ -1,6 +1,8 @@
 #include <vector>
 #include <string>
 #include <sndfile.h>
+#include <exception>
+#include <stdexcept>
 
 void writeWavFile(std::string path, std::vector<float> samples, float sampleRate)
 {
