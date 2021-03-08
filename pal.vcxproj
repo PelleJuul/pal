@@ -164,7 +164,6 @@
     <ClCompile Include="pal\Filter.cpp" />
     <ClCompile Include="pal\gain.cpp" />
     <ClCompile Include="pal\Gui.cpp" />
-    <ClCompile Include="pal\Gui_windows.cpp" />
     <ClCompile Include="pal\imgui\imgui.cpp" />
     <ClCompile Include="pal\imgui\imgui_demo.cpp" />
     <ClCompile Include="pal\imgui\imgui_draw.cpp" />

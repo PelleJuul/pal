@@ -39,9 +39,6 @@
     <ClCompile Include="pal\Gui.cpp">
       <Filter>Source Files\pal</Filter>
     </ClCompile>
-    <ClCompile Include="pal\Gui_windows.cpp">
-      <Filter>Source Files\pal</Filter>
-    </ClCompile>
     <ClCompile Include="pal\Oscillator.cpp">
       <Filter>Source Files\pal</Filter>
     </ClCompile>
